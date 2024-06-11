@@ -1,0 +1,103 @@
+\documentclass[man]{apa7}
+\usepackage{lipsum}
+\usepackage[utf8]{vietnam}
+\usepackage{csquotes}
+\usepackage[style=apa,sortcites=true,sorting=nyt,backend=biber]{biblatex}
+\DeclareLanguageMapping{american}{american-apa}
+\addbibresource{bibliography.bib}
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+\usepackage{indentfirst}
+\setlength{\parindent}{0.5in}
+\usepackage[left=1in, right=1in]{geometry}
+
+\title{Hàm băm mật mã học}
+\shorttitle{HÀM BĂM MẬT MÃ HỌC}
+\author{
+Nhóm 19.\\
+Nguyễn Bá Anh 20203309\\
+Nguyễn Thị Vân Anh 20200036\\
+Nguyễn Đức Huynh 20206149\\
+Nguyễn Lương Quỳnh Trang 20206175\\
+Bùi Thanh Tùng 20206181\\[0.5cm]
+Viện Toán ứng dụng và Tin học \\
+Đại học Bách khoa Hà Nội\\[0.5cm]
+Học phần: Mật mã và độ phức tạp thuật toán\\
+PGS. TS. Nguyễn Đình Hân\\ 
+TS. Ngô Thị Hiền\\[0.5cm]
+\today
+}
+\affiliation{}
+% \leftheader{Weiss}
+\abstract{Thông tin luôn là một trong những nguồn tài nguyên quan trọng bậc nhất đối với các tổ chức và doanh nghiệp. Với sự phát triển bùng nổ của máy tính và Internet trong thời đại hiện nay, hầu hết thông tin đều được số hóa, vì thế việc truyền đạt chúng trở nên nhanh gọn và thuận tiện hơn bao giờ hết. Tuy nhiên, những thiết bị công nghệ cao ra đời cũng mang theo mối nguy cơ lớn cho vấn đề bảo mật dữ liệu. Để dữ liệu không bị chỉnh sửa, thiệt hại hay bị mất đi, chúng sẽ được mã hóa, để những kẻ tấn công không thể đọc được thông tin trong dữ liệu. Mật mã học ra đời với mục đích nghiên cứu và sử dụng những kĩ thuật, phương thức giao tiếp đảm bảo an toàn thông tin, ngăn chặn bên thứ ba tiếp cận được thông tin.\\ 
+\noindent Trong bài báo cáo này, chúng em sẽ trình bày về một khái niệm nền tảng và có ứng dụng đa dạng trong lĩnh vực mật mã học: hàm băm mật mã học. Từ đó, mọi người sẽ có được cái nhìn cơ bản, tổng quan về hàm băm trong mật mã học, bước đầu đánh giá được vai trò của hàm băm, cũng như những ưu thế và rủi ro của nó trong lĩnh vực bảo mật, đồng thời có thể có những sự tìm hiểu và nghiên cứu sâu sắc hơn đối với chủ đề này.\\[0.5cm]
+\begin{center}
+    \textbf{Lời cảm ơn}
+\end{center}
+\noindent Trong quá trình hoàn thành bài báo cáo này, chúng em xin trân trọng gửi lời cảm ơn đến PGS. TS.
+Nguyễn Đình Hân và TS. Ngô Thị Hiền đã đồng hành cùng chúng em trong bộ môn \textbf{Mật mã và độ phức tạp thuật toán}, sẵn sàng giúp đỡ, tư vấn và giải đáp các vấn đề chúng em đặt ra. Kiến thức trong báo cáo được chúng em tra cứu và tổng hợp phân tích từ nhiều nguồn nên không tránh khỏi có sự sai sót. Vậy nên chúng em hy vọng sẽ nhận được những ý kiến nhận xét từ thầy cô và các bạn để bài báo cáo trở nên hoàn thiện hơn.\\ [0.2cm]
+\noindent Chúng em xin chân thành cảm ơn!\\
+\noindent \textbf{\textit{Nhóm 19.}}
+}
+
+% \keywords{APA style, demonstration}
+
+% \authornote{
+   % \addORCIDlink{Daniel A. Weiss}{0000-0000-0000-0000}/
+
+  % Correspondence concerning this article should be addressed to Daniel A. Weiss, Department of Educational Psychology, Counseling and
+  % Special Education, A University Somewhere, 123 Main St., Oneonta, NY
+  % 13820.  E-mail: daniel.weiss.led@gmail.com}
+
+\begin{document}
+\maketitle
+\setlength{\leftmargin}{-0.5mm}\tableofcontents
+\newpage\,\thispagestyle{empty}
+
+\newpage
+\section*{Đóng góp của thành viên}
+\setcounter{page}{4}
+\noindent Tóm tắt đóng góp của từng thành viên:
+\begin{itemize}
+    \item Nguyễn Lương Quỳnh Trang: Tìm hiểu và giới thiệu tổng quan về hàm băm mật mã học, chỉnh sửa và hoàn thiện format bài báo cáo theo chuẩn APA
+    
+    \item Nguyễn Thị Vân Anh: Tìm hiểu và trình bày về tính chất của hàm băm mật mã, chỉnh sửa và hoàn thiện slide trình bày
+    
+    \item Bùi Thanh Tùng: Tìm hiểu và đưa ra các nội dung chính của báo cáo, tìm hiểu và trình bày về các ứng dụng của thuật toán hàm băm trong lĩnh vực mật mã học
+    \item Nguyễn Đức Huynh: Tìm hiểu và trình bày về các phương thức tấn công thuật toán hàm băm, chạy chương trình demo tấn công thuật toán hàm băm
+    \item Nguyễn Bá Anh: Tìm hiểu và trình bày về các thuật toán hàm băm, viết chương trình demo thuật toán
+\end{itemize}
+\noindent Ngoài ra, tất cả các thành viên có đóng góp tích cực trong phân chia công việc, hoàn thành nội dung và nhiệm vụ của mình đúng hạn, tích cực tham gia trao đổi và đóng góp ý kiến cho bài báo cáo chung.\\
+\noindent Điểm đánh giá thành viên theo theo chí:
+\begin{center}
+    \includegraphics[width = 0.98\textwidth]{điểm đánh giá.png}
+\end{center}
+\addcontentsline{toc}{section}{Đóng góp của thành viên}
+\newpage\,\thispagestyle{empty}
+
+\newpage
+\section{Giới thiệu về hàm băm trong mật mã học}
+\setcounter{page}{5}
+\input{Giới thiệu}
+\newpage
+\section{Tính chất của hàm băm mật mã học}
+\input{Tính chất}
+\section{Ứng dụng của hàm băm mật mã học}
+\input{Ứng dụng}
+\section{Một số thuật toán}
+\input{Thuật toán và mô phỏng}
+\section{Tấn công hàm băm}
+\input{Tấn công}
+
+\newpage
+\section{Tham khảo}
+\noindent Picolet, J. (2016). \textit{Hash Crack: Password Cracking Manual}.
+
+\, \\[0.5cm]
+
+\section{Phụ lục}
+\noindent Mã nguồn chương trình demo thuật toán MD5.\\
+\href{https://github.com/nguyenbaanh7779/code_mat_ma?fbclid=IwAR20RJeoBfcSAayob8vxjEPxBI3zdnPd7JFRE7L9xxqbpfqzSylKG9a0eHM}{https://github.com/nguyenbaanh7779/}\\
+\noindent Trang web thực hiện demo tấn công thuật toán hàm băm.\\
+\href{https://crackstation.net/?fbclid=IwAR2_eiuPHRtrLvUnXNkEY9dLh9bE5JLRALgDlPUUraKCGqXX9CsqdOjS3ao}{https://crackstation.net/}
+
+\end{document}
